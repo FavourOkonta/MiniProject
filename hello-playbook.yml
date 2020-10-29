@@ -1,0 +1,8 @@
+---
+- hosts: web-servers
+  tasks:
+    - name: simple ping
+      ping:
+    - name: Run command
+      command: docker cp index.html ec2-user_nginx_1:/usr/share/nginx/html/
+      become: true
